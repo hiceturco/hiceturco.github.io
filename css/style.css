@@ -1,0 +1,593 @@
+body {
+    --background-color: #FFF;
+    --text-color: #000;
+    --th-background-color: #555757;
+}
+
+body.dark {
+    --background-color: #111111;
+    --text-color: #FFF;
+    --th-background-color: #FFF;
+}
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+#theme {
+    display: block;
+    height: 18px;
+    width: 18px;
+    background-color: var(--text-color) !important;
+    float: right;
+    margin-right: 25px;
+}
+
+body {
+    font-size: 1.0em;
+    padding: 0em 1.2em;
+    font-family: "basier_circle_monoregular","Courier New","Courier",monospace;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+p,
+span,
+b,
+div {
+    word-spacing: -2px;
+}
+
+a,
+a:hover {
+    color: var(--text-color);
+}
+
+span.overtime {
+    color: red
+}
+
+span.burn_soon {
+    color: orange
+}
+
+.block {
+    display: block;
+    width: 100%;
+    padding: 0em 0em 1em 0em;
+    margin: 0;
+}
+
+#bookmarklet {
+    display: block;
+    clear: both;
+    margin-top: 5px;
+}
+
+#result {
+    display: block;
+    padding: 0;
+    overflow: auto;
+    font-size: 0.9em;
+}
+
+#result .media {
+    min-width: 100px;
+    max-width: 250px !important;
+    max-height: 250px !important;
+}
+
+#swap.screenshot {
+    max-width: 1024px !important;
+}
+
+#swap.screenshot .infos {
+    display: none;
+}
+
+#swap.screenshot .single {
+    margin: 2px;
+    padding: 0px;
+    width: auto;
+    height: auto;
+}
+
+#swap.screenshot img,
+#swap.screenshot video {
+    padding: 0px;
+    margin: 0;
+}
+
+#swap h3 {
+    display: block;
+    clear: both;
+    border-bottom: 1px solid;
+    font-size: 1.6em;
+}
+
+#swap.screenshot h3 {
+    margin-top: 12px;
+    padding-top: 12px;
+}
+
+#swap h3 a {
+    text-decoration: none;
+}
+
+#swap h3 .small {
+    font-size: 0.75em;
+}
+
+#collector h3 {
+    font-size: 1.4em;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px;
+}
+
+#result .qty b,
+#swap .qty b {
+    display: inline-block;
+    font-size: 1.1em;
+    margin-top: -0.1em;
+}
+
+td.op_sale {
+    color: green
+}
+
+td.op_buy {
+    color: red
+}
+
+h2 {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+h2 span {
+    display: block;
+    font-size: 0.7em;
+    color: dimgray;
+}
+
+.filter_form {
+    display: inline-block;
+    font-size: 18px;
+    margin-left: 10px;
+    font-weight: normal !important;
+}
+
+h3 .filter_form {
+    font-size: 15px;
+}
+
+img,
+video {
+    padding: 5px 0px 10px 0px;
+}
+
+div.nfts,
+div.collections {
+
+}
+
+div.nfts div {
+    margin: 15px 0px;
+}
+
+div.nfts div.single,
+div.collections div.single {
+    display: block;
+    float: left;
+    margin: 15px 0px 15px 0px;
+    padding-right: 10px;
+    width: 270px;
+    overflow: hidden;
+}
+
+div.nfts div.single {
+    height: 300px;
+    max-height: 300px;
+}
+
+div.collections div.single {
+    height: 350px;
+    max-height: 350px;
+}
+
+div.nfts div.collect {
+    width: 95%;
+    float: none;
+    border-bottom: 1px solid var(--text-color);
+}
+
+div.collect div.left {
+    float: left;
+    width: 280px;
+    max-width: 280px;
+    margin: 0;
+    padding: 0;
+}
+
+div.collect div.right {
+    float: left;
+    min-width: 310px;
+    margin: 0;
+    padding: 0;
+    padding-left: 10px;
+    padding-top: 40px;
+}
+
+div.nfts div.single a.limited,
+div.collections div.single a.limited {
+    display: inline-block;
+    vertical-align: bottom;
+    max-width: 250px;
+    overflow: hidden;
+}
+
+span.title {
+    display: block;
+    max-width: 260px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+a.social_icon {
+    display: inline-block;
+    height: 16px;
+}
+
+a.social_icon img {
+    width: 16px;
+    height: 16px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: -2px;
+}
+
+.wrapper {
+    min-height: 100%;
+    /* Égal à la hauteur du footer */
+    /* Tient compte aussi d'une possible margin-bottom du dernier enfant */
+}
+
+
+/* live feed */
+
+#collected,
+#swapped,
+#minted {
+    height: 500px;
+    overflow-y: scroll;
+    line-height: 26px;
+}
+
+#stats {
+    width: 100%;
+    height: 26px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 13px;
+}
+
+.top_border {
+    border-top: 2px solid black;
+    margin-top: 10px;
+    padding-top: 10px;
+}
+
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+.free_obj,
+.free_obj a,
+.free_obj a:visited,
+.free_obj a:hover {
+    color: green
+}
+
+.operation {
+    position: relative;
+    line-height: 18px;
+    margin-bottom: 2px;
+}
+
+.operation.text {
+    display: block;
+    clear: both;
+}
+
+.operation.image {
+    border: 1px solid grey;
+    width: 175px;
+    height: 175px;
+    display: block;
+    float: left;
+    margin: 5px;
+}
+
+.operation.image>a {
+    display: block;
+    width: 175px;
+    height: 175px;
+}
+
+.operation.image span {
+    height: 18px;
+    font-size: 13px;
+    position: absolute;
+    background-color: var(--background-color);
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 171px;
+    opacity: 0.90;
+    padding: 0px 2px;
+}
+
+.operation.image span a {
+    display: inline;
+    text-decoration: none;
+}
+
+.operation .creator {
+    border-bottom: 1px solid var(--text-color);
+    top: 0;
+    left: 0;
+}
+
+.operation .price {
+    border-top: 1px solid var(--text-color);
+    bottom: 0;
+    right: 0;
+    text-align: right;
+    z-index: 10px;
+}
+
+.price .collector {
+    font-style: normal;
+    display: block;
+    float: left;
+    max-width: 115px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+}
+
+#monitor .primary {
+    border-color: #008000;
+    color: #008000 !important;
+    font-weight: bold;
+}
+
+#monitor .primary a {
+    color: #008000 !important;
+}
+
+#monitor .secondary {
+    border-color: #FF4500;
+    color: #FF4500;
+    font-weight: bold;
+}
+
+#monitor .secondary a {
+    color: #FF4500;
+}
+
+#monitor img {
+    vertical-align: bottom;
+    max-width: 175px;
+    max-height: 175px;
+    padding: 0;
+    margin: 0;
+}
+
+#monitor h3 {
+    margin: 0;
+    padding: 0;
+    padding-bottom: 5px 0px;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+#push {
+    height: 60px !important;
+    display: block;
+    float: none;
+    clear: both;
+}
+
+#made_by {
+    height: 25px;
+}
+
+#made_by {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    text-align: left;
+    font-size: 0.9em;
+    padding: 10px;
+}
+
+#profile {
+    margin-top: 15px;
+}
+
+.profile_block {
+    display: block;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+.profile {
+    display: flex;
+}
+
+.profile img {
+    border-radius: 100%;
+    padding: 1px;
+    width: 120px;
+    height: 120px;
+    border: 2px solid var(--text-color);
+    transition: border-color .5s ease-out;
+}
+
+.profile .bio {
+    margin-left: 20px;
+}
+
+.profile .bio p {
+    margin-top: 0px;
+}
+
+.profile .social {
+    margin-top: 10px;
+}
+
+.social a .link_text {
+    display: none;
+}
+
+table {
+    font: normal 13px Arial, sans-serif;
+    border-spacing: 0;
+    border-collapse: collapse;
+    margin-bottom: 1em;
+}
+
+#sellers,
+#buyers,
+#fans {
+    display: inline-block;
+    vertical-align: top;
+}
+
+table tbody {
+    border: solid 1px var(--text-color);
+}
+
+table th {
+    background-color: var(--th-background-color);
+    border: solid 1px var(--th-background-color);
+    color: var(--background-color);
+    padding: 10px;
+    text-align: left;
+}
+
+table td {
+    border: solid 1px var(--th-background-color);
+    color: var(--text-color);
+    padding: 10px;
+    text-shadow: 1px 1px 1px var(--background-color);
+    ;
+}
+
+table th.right,
+table td.right {
+    text-align: right;
+}
+
+table.sortable th:not(.sorttable_sorted):not(.sorttable_sorted_reverse):not(.sorttable_nosort):after {
+    content: " \25B4\25BE"
+}
+
+table th {
+    position: sticky;
+    top: 0;
+}
+
+#sold,
+#sales {
+    max-width: 34%;
+    float: left;
+    display: block;
+    margin-right: 10px;
+}
+
+.logo {
+	padding-top: 20px;
+	margin-left: -10px;	
+}
+
+#owners {
+    max-width: 30%;
+    float: left;
+    display: block;
+}
+
+@media (max-width: 1125px) {
+    #sold,
+    #sales,
+    #owners {
+        width: auto;
+        max-width: 97%;
+        display: block;
+        float: none;
+        margin-bottom: 20px;
+    }
+}
+
+p.help {
+}
+
+#menu a {
+    background-color: var(--text-color);
+    border: none;
+    color: var(--background-color);
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 8px;
+}
+
+div.cancel_swap a:after {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "×";
+    font-size: 300px;
+    font-weight: lighter;
+    color: red;
+    line-height: 175px;
+    text-align: center;
+    vertical-align: center;
+}
+
+a.button {
+    background-color: var(--text-color);
+    border: none;
+    color: var(--background-color);
+    min-width: 100px;
+    padding: 5 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 4px 2px;
+    border-radius: 8px;
+    font-size: 1.1em;
+}

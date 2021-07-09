@@ -1,0 +1,58 @@
+<html>
+
+<head>
+    <link rel="apple-touch-icon" sizes="180x180" href="../favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon/favicon-16x16.png">
+    <link rel="manifest" href="../favicon/site.webmanifest">
+    <link rel="mask-icon" href="../favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <title>hiceturco - We are a group of Turkish NFT artists from various disciplines and styles.</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="../css/style.css" rel="stylesheet">
+
+    <script src="../ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="../npm/lozad/dist/lozad.min.js"></script>
+
+    <script src="../js/utils.js"></script>
+    <script src="../js/hen.js"></script>
+    <script src="../js/trade.js"></script>
+    <script src="../js/onsale.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+			event = urlParams.get("event");
+            if (empty(event)) event = "hiceturco";
+			filterTag(event)
+        });
+    </script>
+</head>
+
+<body class="hen">
+    <div id="wrapper" class="wrapper">
+		<img class="logo" src= "/hiceturco-logo-gif3.gif">
+		<p><b><a href="https://twitter.com/NFT_Turkey" target="_blank">Twitter</a> - <a href="https://www.instagram.com/nftturkey/" target="_blank">Instagram</a> - <a href="https://discord.com/invite/jJgYWUedyC" target="_blank">Discord</a></b> <p>
+        <p class="help">
+            Hi! We are a group of Turkish NFT artists from various disciplines and styles. We love hic et nunc, so we wanted to create a special event we like to call #hiceturco and share some of our latest works under this tag. We hope this helps the #hicetnunc community to get to know the Turkish NFT art scene and that you enjoy our works!
+        </p>
+        <div id="error" style="display:none; width:100%; padding: 1em 0; margin:0;"></div>
+        <div id="infos"></div>
+        <div id="filters" style='margin:0 0 10px 0px; padding:0'>
+            <b>EVENTS : 
+				<a href="#" onclick="filterTag('hiceturco'); return false;">hiceturco</a> -
+                <a href="#" onclick="filterTag('henthousand'); return false;">henthousand</a>
+                <br></b>
+        </div>
+        <p id="loading" style="display:none; width:100%; padding: 1em 0; margin:0;">
+            Loading...</p>
+        <div id="result" class='block collections'></div>
+        <div id="push"></div>
+    </div>
+
+    <footer id="made_by">
+        Special thanks to <a href="https://twitter.com/nftbiker" target="_blank">@nftbiker</a> and <a href="https://twitter.com/marchingsquare" target="_blank">@marchingsquare</a>
+        <a href="#" id="theme">&nbsp;</a>
+    </footer>
+
+</body>
+
+</html>
