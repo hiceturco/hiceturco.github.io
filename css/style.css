@@ -1,13 +1,21 @@
 body {
-    --background-color: #FFF;
+    --background-color: #eee;
     --text-color: #000;
     --th-background-color: #555757;
+	--filter: invert(1);
 }
 
 body.dark {
     --background-color: #111111;
     --text-color: #FFF;
     --th-background-color: #FFF;
+	--filter: invert(0);
+}
+
+.logo {
+	padding-top: 20px;
+	margin-left: -10px;	
+	filter: var(--filter);
 }
 
 html,
@@ -525,10 +533,6 @@ table th {
     margin-right: 10px;
 }
 
-.logo {
-	padding-top: 20px;
-	margin-left: -10px;	
-}
 
 #owners {
     max-width: 30%;
