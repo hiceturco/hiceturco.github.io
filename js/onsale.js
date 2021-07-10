@@ -1,6 +1,6 @@
 const query = `
-query myQuery($tags: [String!]) {
-  hic_et_nunc_token_tag(where: {tag: {tag: {_in: $tags}}}) {
+query myQuery($tags: [String!],$gte: timestamptz!, $lte: timestamptz!) {
+  hic_et_nunc_token_tag(where: {tag: {tag: {_in: $tags}}, token: {timestamp: {_gte: $gte, _lte: $lte}}}) {
       token {
       id
       title
@@ -27,10 +27,22 @@ const bannedOBJKTS = [];
 
 var not_me = false;
 
+var gte = "2020-05-20T00:00:00Z";
+var lte = "2100-05-31T00:00:00Z";
+
 function filterTag(getTag){
 	urlParams.set("event", getTag);
     update_current_href();
 	tags = getTag;
+	
+	if (getTag === "hiceturco"){
+	gte = "2021-05-20T00:00:00Z";
+	lte = "2021-05-31T00:00:00Z";}
+	else {
+	gte = "2020-05-20T00:00:00Z";
+    lte = "2100-05-30T00:00:00Z";
+	}
+	
 	fetchOnSale();
 }
 
@@ -40,7 +52,7 @@ async function fetchOnSale() {
     $("#swap").html('');
     loading();
     loadArtists(true);
-    const { errors, data } = await fetchGraphQL(query, "myQuery", { "tags": tags });
+    const { errors, data } = await fetchGraphQL(query, "myQuery", { "tags": tags, "gte": gte, "lte": lte });
     if (errors) return showError(errors);
 
     window.collection_type = 'onsale';
