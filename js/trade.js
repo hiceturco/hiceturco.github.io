@@ -50,7 +50,7 @@ function sortTrades(sort) {
     } 
 	if (sort == 'unsold') {
         window.transactions.sort(function(a, b) {
-            return (b.token.supply/b.token.trades_aggregate.aggregate.count) - (a.token.supply/a.token.trades_aggregate.aggregate.count);
+        	return (b.token.supply/Math.max(0.01,b.token.trades_aggregate.aggregate.count)) - (a.token.supply/Math.max(0.01,a.token.trades_aggregate.aggregate.count));
         });
     }
  
