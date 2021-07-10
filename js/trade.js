@@ -86,7 +86,7 @@ async function showToken(tx, sales) {
     if (sales) {
         obj = operation_link(objkt.id, `#${objkt.id}`, tx.platform);
         html = "<b>" + artist + "</b><br/>";
-        html += "<span class='title'>" + objkt.title + '</span>';
+        html += "<a href='https://www.hicetnunc.xyz/objkt/" + objkt.id + "' target='_blank'><span class='title'>" + objkt.title + '</span></a>';
 
         if (window.collection_type == 'sold') {
             html += wallet_link(tx.buyer) + " - ";
