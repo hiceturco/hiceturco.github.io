@@ -37,8 +37,10 @@ function filterTag(getTag){
 	
 	if (getTag === "hiceturco"){
 	gte = "2021-05-20T00:00:00Z";
-	lte = "2021-05-31T00:00:00Z";}
-	else {
+	lte = "2021-05-31T00:00:00Z";
+	document.getElementById("descTurco").innerHTML = "We love hic et nunc, so we wanted to create a special event we like to call #hiceturco and share some of our latest works under this tag. We hope this helps the #hicetnunc community to get to know the Turkish NFT art scene and that you enjoy our works!";}
+	else  {
+	document.getElementById("descTurco").innerHTML = "placeholder";
 	gte = "2020-05-20T00:00:00Z";
     lte = "2100-05-30T00:00:00Z";
 	}
