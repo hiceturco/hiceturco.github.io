@@ -44,7 +44,7 @@ const query2 = `query MyQuery {
   }
 }`
 
-const bannedOBJKTS = [];
+const bannedOBJKTS = [172633];
 
 var not_me = false;
 
