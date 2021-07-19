@@ -61,7 +61,12 @@ function filterTag(getTag){
 	lte = "2021-05-31T00:00:00Z";
 	document.getElementById("descTurco").innerHTML = "Hi! We are a group of Turkish NFT artists from various disciplines and styles. <br> We love hic et nunc, so we wanted to create a special event we like to call <b>#hiceturco</b> and share some of our latest works under this tag.<br> We hope this helps the <b>#hiceturco</b> community to get to know the Turkish NFT art scene and that you enjoy our works!";}
 	else if (tags === "cen_magic")  {
-	document.getElementById("descTurco").innerHTML = "Out of ideas or wanna nurture your creative thinking with challenges? We are launching our first-ever '1topic 1week' challenge, challengetnunc!<br> Starts every Monday and lasts till the end of the week.<br> Here is the first one to keep you busy! <b>*Magic*</b> <br>Swap by Friday together with the hashtags <b>#challengetnunc #cen_magic</b> <br>No winners. Meet new artists and have fun.";
+	document.getElementById("descTurco").innerHTML = "Out of ideas or wanna nurture your creative thinking with challenges? We are launching our first-ever '1topic 1week' challenge, challengetnunc!<br> Starts every Monday and lasts till the end of the week.<br> Here is the first one to keep you busy! <b>*Magic*</b> <br>Swap by <b>19.07.2021 Friday</b> together with the hashtags <b>#challengetnunc #cen_magic</b> <br>No winners. Meet new artists and have fun.";
+	gte = "2020-05-20T00:00:00Z";
+    lte = "2100-05-30T00:00:00Z";
+	}
+	else if (tags === "cen_mask")  {
+	document.getElementById("descTurco").innerHTML = "Out of ideas or wanna nurture your creative thinking with challenges? Welcome to our '1topic 1week' challenge, challengetnunc!<br>Here is the second topic to keep you busy! <b>*Mask*</b> <br>Swap by <b>23.07.2021 Friday</b> together with the hashtags <b>#challengetnunc #cen_mask</b> <br>No winners. Meet new artists and have fun.";
 	gte = "2020-05-20T00:00:00Z";
     lte = "2100-05-30T00:00:00Z";
 	}
