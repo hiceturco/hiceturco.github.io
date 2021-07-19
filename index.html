@@ -21,7 +21,7 @@
         $(document).ready(function() {
 
 			event = urlParams.get("event");
-            if (empty(event)) event = "cen_magic";
+            if (empty(event)) event = "cen_mask";
 			filterTag(event)
         });
     </script>
@@ -39,6 +39,7 @@
         <div id="infos"></div>
         <div id="filters" style='margin:0 0 10px 0px; padding:0'>
             <b>EVENTS :
+		<a href="#" onclick="filterTag('cen_mask'); return false;">cen_mask</a> |	
 		<a href="#" onclick="filterTag('cen_magic'); return false;">cen_magic</a> |			
 		<a href="#" onclick="filterTag('hiceturco'); return false;">hiceturco</a>
                 <br></b>
