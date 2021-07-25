@@ -70,6 +70,11 @@ function filterTag(getTag){
 	gte = "2020-05-20T00:00:00Z";
     lte = "2100-05-30T00:00:00Z";
 	}
+		else if (tags === "cen_utopia_dystopia")  {
+	document.getElementById("descTurco").innerHTML = "Out of ideas or wanna nurture your creative thinking with challenges? Welcome to our '1topic 1week' challenge, challengetnunc!<br>Here is the third topic to keep you busy! <b>*utopia/dystopia*</b> <br>Swap by <b>30.07.2021 Friday</b> together with the hashtags <b>#challengetnunc #cen_utopia_dystopia</b> <br>No winners. Meet new artists and have fun.";
+	gte = "2020-05-20T00:00:00Z";
+    lte = "2100-05-30T00:00:00Z";
+	}
 	
 	fetchOnSale();
 }
