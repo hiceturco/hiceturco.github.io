@@ -13,8 +13,9 @@ body.dark {
 }
 
 .logo {
-	padding-top: 20px;
-	margin-left: -10px;	
+	margin-top: -5px;
+	margin-bottom: -15px;
+	padding: 0 !important;
 	filter: var(--filter);
 }
 
