@@ -76,6 +76,7 @@ function filterTag(getTag){
     lte = "2100-05-30T00:00:00Z";
 	}
 		else if (tags === "helpetnunc")  {
+	tags = ["helpetnunc","#helpetnunc"];
 	document.getElementById("descTurco").innerHTML = "Turkey is in flames. Our forests are burning, animals are dying and people are losing their homes. We the artists that brought you <b>#hiceturco</b> decided to do something about this.<br><br>This is why we are bringing you <b style='color: #f5555d'>#helpetnunc</b>. This will be a week long event where artworks of your favourite artists from Turkey will be available to collect at the official hic et turco account.<br><br>All the profits will go to those in need and will help to rebuild and regrow what was lost.<br>Come join us to help spread the word.";
 	gte = "2020-05-20T00:00:00Z";
     lte = "2100-05-30T00:00:00Z";
