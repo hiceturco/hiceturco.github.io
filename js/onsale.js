@@ -100,12 +100,15 @@ async function fetchOnSale() {
     if (errors) return showError(errors);
 	
     window.collection_type = 'onsale';
-    transactions = []
+    transactions = [];
+	dubs = [];
     for (trade of data.hic_et_nunc_token_tag.concat()) {
         if (empty(trade.token.creator.name)) trade.token.creator.name = proper_value(window.artists[trade.token.creator.address]);
 		if(trade.token.supply>0) {
-			if(!bannedOBJKTS.includes(trade.token.id))
-		transactions.push(trade);};
+			if(!bannedOBJKTS.includes(trade.token.id)&&!dubs.includes(trade.token.id))
+		transactions.push(trade);
+		dubs.push(trade.token.id);
+	};
     };
 	// manually added objkts
 	if(tags === "cen_magic"){
@@ -118,7 +121,7 @@ async function fetchOnSale() {
 			if(!bannedOBJKTS.includes(trade.id))
 		transactions.push(JSON.parse('{"token":'+JSON.stringify(trade)+'}'));}
     }}
-	
+	console.log(dubs);
 	window.transactions = transactions;
     sortTrades('unsold');
 }
