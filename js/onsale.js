@@ -43,6 +43,27 @@ const query2 = `query MyQuery {
     }
   }
 }`
+const query3 = `query MyQuery {
+  hic_et_nunc_token(where: {id: {_in: ["196026"]}}){
+    id
+    title
+    supply
+    mime
+    thumbnail_uri
+    display_uri
+    artifact_uri
+    royalties
+    creator {
+      address
+      name
+    }
+    trades_aggregate {
+      aggregate {
+        count
+      }
+    }
+  }
+}`
 
 const bannedOBJKTS = [];
 
@@ -114,6 +135,16 @@ async function fetchOnSale() {
 	if(tags === "cen_magic"){
 	var { errors2, data } = await fetchGraphQL(query2);
     if (errors2) return showError(errors2);
+	    
+	    for (trade of data.hic_et_nunc_token.concat()) {
+        if (empty(trade.creator.name)) trade.creator.name = proper_value(window.artists[trade.creator.address]);
+		if(trade.supply>0) {
+			if(!bannedOBJKTS.includes(trade.id))
+		transactions.push(JSON.parse('{"token":'+JSON.stringify(trade)+'}'));}
+    }}
+		if(tags.includes("helpetnunc")){
+	var { errors3, data } = await fetchGraphQL(query3);
+    if (errors3) return showError(errors3);
 	    
 	    for (trade of data.hic_et_nunc_token.concat()) {
         if (empty(trade.creator.name)) trade.creator.name = proper_value(window.artists[trade.creator.address]);
