@@ -44,7 +44,7 @@ const query2 = `query MyQuery {
   }
 }`
 const query3 = `query MyQuery {
-  hic_et_nunc_token(where: {id: {_in: ["196026"]}}){
+  hic_et_nunc_token(where: {id: {_in: ["196026","196181"]}}){
     id
     title
     supply
