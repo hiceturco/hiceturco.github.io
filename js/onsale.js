@@ -102,6 +102,11 @@ function filterTag(getTag){
 	gte = "2020-05-20T00:00:00Z";
     lte = "2100-05-30T00:00:00Z";
 	}
+			else if (tags === "cen_reflection")  {
+	document.getElementById("descTurco").innerHTML = "Out of ideas or wanna nurture your creative thinking with challenges? Welcome to our '1topic 1week' challenge, challengetnunc!<br>Here is the fourth topic to keep you busy! <b>*reflection*</b> <br>Swap by <b>27.08.2021 Friday</b> together with the hashtags <b>#challengetnunc #cen_reflection</b> <br>No winners. Meet new artists and have fun.";
+	gte = "2020-05-20T00:00:00Z";
+    lte = "2100-05-30T00:00:00Z";
+	}
 	
 	fetchOnSale();
 }
