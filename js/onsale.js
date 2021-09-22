@@ -112,6 +112,10 @@ function filterTag(getTag){
 	gte = "2020-05-20T00:00:00Z";
     lte = "2100-05-30T00:00:00Z";
 	}
+					else if (tags === "hiceturco2")  {
+	gte = "2021-09-23T00:00:00Z";
+	lte = "2021-09-30T00:00:00Z";
+	document.getElementById("descTurco").innerHTML = "Hi! We are a group of Turkish NFT artists from various disciplines and styles. <br> We love hic et nunc, so we wanted to create a special event we like to call <b>#hiceturco2</b> and share some of our latest works under this tag.<br> We hope this helps the <b>#hiceturco2</b> community to get to know the Turkish NFT art scene and that you enjoy our works!";}
 	
 	fetchOnSale();
 }
