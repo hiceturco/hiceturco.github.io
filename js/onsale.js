@@ -66,6 +66,7 @@ const query3 = `query MyQuery {
 }`
 
 const bannedOBJKTS = [];
+const bannedSBJKTS = ["tz1ZvTQv1BS7bjUkcXN8sQWyNmmvgY9ppZQy"];
 
 var not_me = false;
 
@@ -140,7 +141,7 @@ async function fetchOnSale() {
     for (trade of data.hic_et_nunc_token_tag.concat()) {
         if (empty(trade.token.creator.name)) trade.token.creator.name = proper_value(window.artists[trade.token.creator.address]);
 		if(trade.token.supply>0) {
-			if(!bannedOBJKTS.includes(trade.token.id)&&!dubs.includes(trade.token.id))
+			if(!bannedOBJKTS.includes(trade.token.id)&&!dubs.includes(trade.token.id)&&!bannedSBJKTS.includes(trade.token.creator.address))
 		transactions.push(trade);
 		dubs.push(trade.token.id);
 	};
