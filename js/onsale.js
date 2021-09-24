@@ -66,7 +66,7 @@ const query3 = `query MyQuery {
 }`
 
 const bannedOBJKTS = [];
-const bannedSBJKTS = ["tz1ZvTQv1BS7bjUkcXN8sQWyNmmvgY9ppZQy"];
+const bannedSBJKTS = ["tz1ZvTQv1BS7bjUkcXN8sQWyNmmvgY9ppZQy", "tz1dFVePa546aLxLEKWmW2Xf9UKwYcJnTn5J"];
 
 var not_me = false;
 
