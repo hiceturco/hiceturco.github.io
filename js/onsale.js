@@ -118,7 +118,7 @@ function filterTag(getTag){
 	lte = "2021-09-30T00:00:00Z";
 	document.getElementById("descTurco").innerHTML = "Hi! We are a group of Turkish NFT artists from various disciplines and styles. <br> We love hic et nunc, so we wanted to create a special event we like to call <b>#hiceturco2</b> and share some of our latest works under this tag.<br> We hope this helps the <b>#hiceturco2</b> community to get to know the Turkish NFT art scene and that you enjoy our works!";}
 					else if (tags === "cen_laluna")  {
-	document.getElementById("descTurco").innerHTML = "Out of ideas or wanna nurture your creative thinking with challenges? Welcome to our '1topic 1week' challenge, challengetnunc!<br>Here is the sixth topic to keep you busy! <b>*la luna*</b> <br>Swap by <b>10.09.2021 Friday</b> together with the hashtags <b>#challengetnunc #cen_laluna</b> <br>No winners. Meet new artists and have fun.";
+	document.getElementById("descTurco").innerHTML = "Out of ideas or wanna nurture your creative thinking with challenges? Welcome to our '1topic 1week' challenge, challengetnunc!<br>Here is the sixth topic to keep you busy! <b>*la luna*</b> <br>Swap by <b>08.10.2021 Friday</b> together with the hashtags <b>#challengetnunc #cen_laluna</b> <br>No winners. Meet new artists and have fun.";
 	gte = "2020-05-20T00:00:00Z";
     lte = "2100-05-30T00:00:00Z";
 	}
