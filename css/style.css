@@ -13,8 +13,8 @@ body.dark {
 }
 
 .logo {
-	margin-top: -5px;
-	margin-bottom: -15px;
+	margin-top: 15px;
+	margin-bottom: 0px;
 	padding: 0 !important;
 	filter: var(--filter);
 }
