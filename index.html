@@ -29,7 +29,7 @@
         $(document).ready(function() {
 
 			event = urlParams.get("event");
-            if (empty(event)) event = "cen_time";
+            if (empty(event)) event = "cen_halloween";
 			filterTag(event)
         });
     </script>
@@ -47,6 +47,7 @@
         <div id="infos"></div>
         <div id="filters" style='margin:0 0 10px 0px; padding:0'>
             <b>EVENTS :
+		<a href="./?event=cen_halloween">cen_halloween</a> | 
 		<a href="./?event=cen_time">cen_time</a> | 
 		<a href="./?event=cen_laluna">cen_laluna</a> | 
 		<a href="./?event=hiceturco2">hiceturco2</a> | 
